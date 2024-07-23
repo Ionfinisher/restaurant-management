@@ -159,7 +159,7 @@ export default function Home() {
       </div>
 
       {/* Book a table section */}
-      <div className="w-full mjy-20 bg-[#0F172B]">
+      <div className="w-full my-20 bg-[#0F172B]">
         <div className="container mx-auto">
           <div className="h-[400px]"></div>
         </div>
