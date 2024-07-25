@@ -6,6 +6,7 @@ import fork from "../../public/fork-knife-svgrepo-com.svg";
 import cart from "../../public/cart-shopping-svgrepo-com.svg";
 import support from "../../public/support-svgrepo-com.svg";
 import plate from "../../public/images/about-4.jpg";
+import Footer from "./components/footer";
 
 
 export default function Home() {
@@ -206,7 +207,9 @@ export default function Home() {
               <div className="flex items-center mt-8 -mx-2">
                 <Image
                   className="object-cover mx-2 rounded-full w-10 shrink-0 h-10 ring-4 ring-gray-300 dark:ring-gray-700"
-                  src={user}
+                  src={"https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"}
+                  width={40}
+                  height={40}
                   alt="User"
                 />
 
@@ -233,7 +236,9 @@ export default function Home() {
               <div className="flex items-center mt-8 -mx-2">
                 <Image
                   className="object-cover mx-2 rounded-full w-10 shrink-0 h-10 ring-4 ring-blue-200"
-                  src={user}
+                  src={"https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"}
+                  width={40}
+                  height={40}
                   alt="User"
                 />
 
@@ -256,7 +261,9 @@ export default function Home() {
               <div className="flex items-center mt-8 -mx-2">
                 <Image
                   className="object-cover mx-2 rounded-full w-10 shrink-0 h-10 ring-4 ring-gray-300 dark:ring-gray-700"
-                  src={user}
+                  src={"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"}
+                  width={40}
+                  height={40}
                   alt="User"
                 />
 
@@ -273,7 +280,8 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* footer */}
+      <Footer/>
     </main>
   );
 }
