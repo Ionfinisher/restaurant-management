@@ -6,7 +6,12 @@ import fork from "../../public/fork-knife-svgrepo-com.svg";
 import cart from "../../public/cart-shopping-svgrepo-com.svg";
 import support from "../../public/support-svgrepo-com.svg";
 import plate from "../../public/images/about-4.jpg";
+import video from "../../public/images/video.jpg";
 import Footer from "./components/footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+
+
 
 
 export default function Home() {
@@ -40,7 +45,7 @@ export default function Home() {
       {/* card section */}
       <div className="w-full">
         <div className="container mx-auto">
-          <div className="flex gap-5 py-20 px-20 items-center justify-between">
+          <div className="flex gap-5 py-10 px-20 items-center justify-between">
             <div className="transition ease-in-out duration-300 shadow-xl bg-white text-black hover:bg-[#FEA116] hover:text-white p-5 flex flex-col gap-5 justify-center items-start w-[224px] h-fit">
               <Image className="color-[#FEA116] hover:color-white" src={user} alt={"user"} width={50} height={50}></Image>
               <h1 className="text-xl font-bold">Master Chefs</h1>
@@ -81,7 +86,8 @@ export default function Home() {
       {/* Popular food section */}
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 pb-20 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-20 md:px-20">
-          <h2 className="text-4xl font-bold tracking-tight text-center text-gray-900">Customers also liked</h2>
+          <h5 className="text-center text-base font-semibold text-[#FEA116]">Menu</h5>
+          <h2 className="text-4xl font-bold tracking-tight text-center text-gray-900">Most Popular items</h2>
 
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             <div className="group relative">
@@ -160,9 +166,43 @@ export default function Home() {
       </div>
 
       {/* Book a table section */}
-      <div className="w-full my-20 bg-[#0F172B]">
+      <div className="w-full mb-20 mt-5 bg-[#0F172B]">
         <div className="container mx-auto">
-          <div className="h-[400px]"></div>
+          <div className="flex justify-space-between items-center gap-8">
+            <div className="basis-1/2">
+              <Image className="w-full" src={video} width={400} height={400} alt={"Book a table"}/>
+            </div>
+            <div className="basis-1/2">
+              <h5 className="text-base font-semibold text-[#FEA116]">Reservation</h5>
+              <h1 className="text-4xl font-bold text-white">Availables tables</h1>
+              
+              <Tabs defaultValue="account" className="w-[400px]">
+                <TabsList>
+                  <TabsTrigger value="account">1</TabsTrigger>
+                  <TabsTrigger value="password">2</TabsTrigger>
+                </TabsList>
+                <TabsContent value="account" >
+                  <div className="flex flex-wrap gap-4 p-2 justify-start items-start">
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T3</Link>
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T31</Link>
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T36</Link>
+
+                  </div>
+                </TabsContent>
+                <TabsContent value="password">
+                  <div className="flex flex-wrap gap-4 p-2 justify-start items-start">
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T1</Link>
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T2</Link>
+                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T45</Link>
+
+                  </div>
+                  
+                </TabsContent>
+              </Tabs>
+
+              
+            </div>
+          </div>
         </div>
       </div>
 
@@ -173,6 +213,7 @@ export default function Home() {
         <div className="container px-20 pb-20 mx-auto">
           <div className="mt-6 md:flex md:items-center md:justify-between">
             <div>
+            <h5 className="text-base font-semibold text-[#FEA116]">Testimonials</h5>
               <h1
                 className="text-2xl font-bold text-gray-900 capitalize lg:text-4xl dark:text-white"
               >
