@@ -167,14 +167,14 @@ export default function Home() {
 
       {/* Book a table section */}
       <div className="w-full mb-20 mt-5 bg-[#0F172B]">
-        <div className="container mx-auto">
-          <div className="flex justify-space-between items-center gap-8">
+        <div>
+          <div className="flex justify-center items-start gap-8">
             <div className="basis-1/2">
               <Image className="w-full" src={video} width={400} height={400} alt={"Book a table"}/>
             </div>
-            <div className="basis-1/2">
+            <div className="basis-1/2 flex flex-col justify-center items-start py-8">
               <h5 className="text-base font-semibold text-[#FEA116]">Reservation</h5>
-              <h1 className="text-4xl font-bold text-white">Availables tables</h1>
+              <h1 className="text-4xl pb-8 font-bold text-white">Available tables per places</h1>
               
               <Tabs defaultValue="account" className="w-[400px]">
                 <TabsList>
@@ -182,7 +182,7 @@ export default function Home() {
                   <TabsTrigger value="password">2</TabsTrigger>
                 </TabsList>
                 <TabsContent value="account" >
-                  <div className="flex flex-wrap gap-4 p-2 justify-start items-start">
+                  <div className="flex flex-wrap gap-4 py-4 justify-start items-start">
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T3</Link>
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T31</Link>
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T36</Link>
@@ -190,7 +190,7 @@ export default function Home() {
                   </div>
                 </TabsContent>
                 <TabsContent value="password">
-                  <div className="flex flex-wrap gap-4 p-2 justify-start items-start">
+                  <div className="flex flex-wrap gap-4 py-4 justify-start items-start">
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T1</Link>
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T2</Link>
                     <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T45</Link>
