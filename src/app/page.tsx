@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* card section */}
-      <div className="w-full">
+      <div className="w-full" id="about">
         <div className="container mx-auto">
           <div className="flex gap-5 py-10 px-20 items-center justify-between">
             <div className="transition ease-in-out duration-300 shadow-xl bg-white text-black hover:bg-[#FEA116] hover:text-white p-5 flex flex-col gap-5 justify-center items-start w-[224px] h-fit">
@@ -209,7 +209,7 @@ export default function Home() {
 
 
       {/* testimonials section */}
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white dark:bg-gray-900" id="testimonials">
         <div className="container px-20 pb-20 mx-auto">
           <div className="mt-6 md:flex md:items-center md:justify-between">
             <div>

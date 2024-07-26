@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { HTMLAttributes } from "react";
 
 export default function Footer() {
     return (
-    <footer className="bg-[#0F172B] text-white">
+    <footer className="bg-[#0F172B] text-white" id="footer">
     <div className="container px-20 pt-20 pb-8 mx-auto">
       <div
         className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
