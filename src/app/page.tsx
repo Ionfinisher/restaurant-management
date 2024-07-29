@@ -9,6 +9,7 @@ import plate from "../../public/images/about-4.jpg";
 import video from "../../public/images/video.jpg";
 import Footer from "./components/footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Navbar from "./components/navbar";
 
 
 
@@ -16,6 +17,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Home() {
   return (
+  <>
+    <Navbar/>
     <main className="bg-white">
       {/* hero section */}
       <div className="w-full h-[732px] bg-[url('/images/bg-hero.jpg')] bg-blend-multiply bg-gray-700 bg-cover bg-center bg-no-repeat flex items-center">
@@ -324,5 +327,6 @@ export default function Home() {
       {/* footer */}
       <Footer/>
     </main>
+  </>
   );
 }

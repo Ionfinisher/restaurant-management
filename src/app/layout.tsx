@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning className="dark:bg-white bg-white">
     <body className={`${inter.className} min-h-screen`}>
       <div>
-        <Navbar/>
         {children}
         </div>
       </body>
