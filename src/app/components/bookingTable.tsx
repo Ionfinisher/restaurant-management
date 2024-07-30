@@ -61,13 +61,14 @@ import Link from "next/link"
   export function BookingTable() {
     return (
       <Table>
-        <TableCaption>Liste des tables</TableCaption>
+        <TableCaption>List of reservations</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]"># Table</TableHead>
-            <TableHead>Places</TableHead>
-            <TableHead>Disponibilité</TableHead>
-            <TableHead >Prix</TableHead>
+            <TableHead className="w-[100px]"># Reserv.</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Amount</TableHead>
+            <TableHead >Status</TableHead>
+            <TableHead >Table</TableHead>
             <TableHead className="text-right">Actions</TableHead>
           </TableRow>
         </TableHeader>
@@ -78,8 +79,10 @@ import Link from "next/link"
               <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
               <TableCell >{invoice.totalAmount}</TableCell>
-              <TableCell className="text-right">
-                <Link href="/" className={buttonVariants({ variant: "outline" })}>Click here</Link>
+              <TableCell >{invoice.invoice}</TableCell>
+              <TableCell className="flex justify-end gap-2">
+                <Link href="/" className={buttonVariants({ variant: "default" })}>Validate</Link>
+                <Link href="/" className={buttonVariants({ variant: "destructive" })}>Reject</Link>
               </TableCell>
             </TableRow>
           ))}

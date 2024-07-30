@@ -5,7 +5,7 @@ import {
   Bell,
   Home,
   LineChart,
-  Vault,
+  ShoppingCart,
   Package2,
   CalendarArrowDown,
   Salad,
@@ -23,13 +23,13 @@ import {
 import { usePathname } from "next/navigation";
 
 
-export default function Sidebar(){
+export default function SidebarClient(){
     const path = usePathname();
     return (
         <div className="hidden border-r bg-muted/40 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-            <Link href="/admin" className="flex items-center gap-2 font-semibold">
+            <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
               <Package2 className="h-6 w-6" />
               <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
                 Restauran🍴
@@ -43,32 +43,32 @@ export default function Sidebar(){
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
-                href="/admin"
-                className={path=="/admin" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
+                href="/dashboard"
+                className={path=="/dashboard" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
-                href="/admin/reservations"
-                className={path=="/admin/reservations" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
+                href="/dashboard/reservations"
+                className={path=="/dashboard/reservations" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
               >
                 <CalendarArrowDown className="h-4 w-4" />
                 Reservations
               </Link>
               <Link
-                href="/admin/plats"
-                className={path=="/admin/plats" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
+                href="/dashboard/plats"
+                className={path=="/dashboard/plats" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
               >
                 <Salad className="h-4 w-4" />
                 Plates
               </Link>
               <Link
-                href="/admin/tables"
-                className={path=="/admin/tables" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
+                href="/dashboard/tables"
+                className={path=="/dashboard/tables" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
               >
-                <Vault className="h-4 w-4" />
-                Tables
+                <ShoppingCart className="h-4 w-4" />
+                Orders
               </Link>
               <Link
                 href="#"

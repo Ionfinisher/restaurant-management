@@ -13,7 +13,7 @@ import {
 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -58,7 +58,9 @@ export default function page() {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Acme Inc</span>
+                  <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    Restauran🍴
+                  </h1>
                 </Link>
                 <Link
                   href="#"
