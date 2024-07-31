@@ -113,8 +113,8 @@ import { DetailsAlert } from "./details"
               <TableCell>{invoice.paymentMethod}</TableCell>
               <TableCell >{invoice.totalAmount}</TableCell>
               <TableCell className="flex justify-end gap-2">
-                <Link href="/" className={buttonVariants({ variant: "default" })}>Update</Link>
-                <Link href="/" className={buttonVariants({ variant: "destructive" })}>Delete</Link>
+                <Link href="/admin/tables/#" className={buttonVariants({ variant: "default" })}>Update</Link>
+                <Link href="/admin/tables/#" className={buttonVariants({ variant: "destructive" })}>Delete</Link>
                 <DetailsAlert content={<Cont/>}/>
               </TableCell>
             </TableRow>

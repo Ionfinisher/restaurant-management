@@ -57,8 +57,8 @@ export default function SidebarClient(){
                 Reservations
               </Link>
               <Link
-                href="/dashboard/plats"
-                className={path=="/dashboard/plats" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
+                href="/dashboard/plates"
+                className={path=="/dashboard/plates" ? "flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-muted-foreground transition-all hover:text-primary" : "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"}
               >
                 <Salad className="h-4 w-4" />
                 Plates
@@ -69,13 +69,6 @@ export default function SidebarClient(){
               >
                 <ShoppingCart className="h-4 w-4" />
                 Orders
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <LineChart className="h-4 w-4" />
-                Analytics
               </Link>
             </nav>
           </div>

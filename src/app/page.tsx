@@ -34,7 +34,7 @@ export default function Home() {
               <p className="text-lg text-white">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
-              <Link className="px-8 py-3 w-fit flex justify-center items-center font-medium text-white capitalize transition-colors duration-300 transform bg-[#FEA116] hover:bg-[#FEA116] focus:outline-none focus:ring focus:ring-[#FEA116] focus:ring-opacity-80" href="#">
+              <Link className="px-8 py-3 w-fit flex justify-center items-center font-medium text-white capitalize transition-colors duration-300 transform bg-[#FEA116] hover:bg-[#FEA116] focus:outline-none focus:ring focus:ring-[#FEA116] focus:ring-opacity-80" href="/auth">
                   <h1 className="text-xl">Book a table</h1>
               </Link>
             </div>
@@ -186,29 +186,24 @@ export default function Home() {
                 </TabsList>
                 <TabsContent value="account" >
                   <div className="flex flex-wrap gap-4 py-4 justify-start items-start">
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T3</Link>
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T31</Link>
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T36</Link>
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T3</Link>
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T31</Link>
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T36</Link>
 
                   </div>
                 </TabsContent>
                 <TabsContent value="password">
                   <div className="flex flex-wrap gap-4 py-4 justify-start items-start">
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T1</Link>
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T2</Link>
-                    <Link href="#" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T45</Link>
-
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T1</Link>
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T2</Link>
+                    <Link href="/auth" className="border border-[#FEA116] rounded-lg p-2 w-fit text-white text-xl hover:text-[#FEA116] hover:bg-white">T45</Link>
                   </div>
-                  
                 </TabsContent>
               </Tabs>
-
-              
-            </div>
           </div>
         </div>
       </div>
-
+      </div>
 
 
       {/* testimonials section */}

@@ -1,4 +1,21 @@
 "use client"
+
+import * as React from "react"
+import { Check, ChevronsUpDown } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+} from "@/components/ui/command"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import Link from "next/link"
 import {
   Bell,
@@ -11,19 +28,17 @@ import {
   Search,
   ShoppingCart,
   Users,
-  CalendarArrowDown
 } from "lucide-react"
 
+import { Badge } from "@/components/ui/badge"
+import { Button, buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,10 +49,55 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import SidebarClient from "../components/sidebarclient"
-import { BookingTable } from "../components/bookingTableClient"
+import { BookingTable } from "@/app/components/bookingTableClient"
+import { PlaceTable } from "@/app/components/placeTable"
+import SidebarClient from "@/app/components/sidebarclient"
 
-export default function page() {
+
+export default function page({ params }: { params: { id: number } }) {
+
+  const [selectedValue, setSelectedValue] = React.useState('');
+  const [selectedPrice, setSelectedPrice] = React.useState('');
+  const handleChange = (event:any) => {
+    setSelectedValue(event.target.value);
+    setSelectedPrice(event.target.price);
+  };
+
+
+const frameworks = [
+  {
+    id: 1,
+    value: "next.js",
+    label: "Next.js",
+    price: 1000,
+  },
+  {
+    id: 2,
+    value: "sveltekit",
+    label: "SvelteKit",
+    price: 2000,
+  },
+  {
+    id: 3,
+    value: "nuxt.js",
+    label: "Nuxt.js",
+    price: 3000,
+  },
+  {
+    id: 4,
+    value: "remix",
+    label: "Remix",
+    price: 4000,
+  },
+  {
+    id: 5,
+    value: "astro",
+    label: "Astro",
+    price: 5000,
+  },
+]
+
+
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <SidebarClient/>
@@ -61,7 +121,9 @@ export default function page() {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Restauran</span>
+                  <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    Restauran🍴
+                  </h1>
                 </Link>
                 <Link
                   href="#"
@@ -93,6 +155,13 @@ export default function page() {
                 >
                   <Users className="h-5 w-5" />
                   Customers
+                </Link>
+                <Link
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <LineChart className="h-5 w-5" />
+                  Analytics
                 </Link>
               </nav>
             </SheetContent>
@@ -127,32 +196,18 @@ export default function page() {
           </DropdownMenu>
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
-          <div className="flex items-center">
-            <h1 className="text-lg font-semibold md:text-2xl">Dashboard</h1>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-lg font-semibold md:text-2xl">Reservations</h1>
+              <p className="text-sm text-muted-foreground">
+                List of reservations
+              </p>
+            </div>
+            <Link href="/dashboard/reservations/create" className={buttonVariants({ variant: "default" })}>Book a table</Link>
           </div>
           <div
-            className="flex flex-1 items-start justify-start gap-5 rounded-lg" x-chunk="dashboard-02-chunk-1"
+            className="flex flex-1 justify-center border border-dashed rounded-lg shadow-sm" x-chunk="dashboard-02-chunk-1"
           >
-            <Card>
-              <CardHeader className="flex flex-row items-center justify-between gap-5 space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Reservations</CardTitle>
-                <CalendarArrowDown className="h-4 w-4 text-muted-foreground" />
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold">5</div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="flex flex-row items-center justify-between gap-5 space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Orders passed</CardTitle>
-                <ShoppingCart className="h-4 w-4 text-muted-foreground" />
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold">2</div>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="flex flex-1 border border-dashed items-center justify-center gap-5 rounded-lg">
             <BookingTable/>
           </div>
         </main>
@@ -160,7 +215,5 @@ export default function page() {
     </div>
   )
 }
-
-
 
 

@@ -111,8 +111,7 @@ function Cont(): React.ReactNode {
               <TableCell>{invoice.paymentMethod}</TableCell>
               <TableCell className="text-right">{invoice.totalAmount}</TableCell>
               <TableCell className="flex justify-end gap-2">
-                <Link href="/#" className={buttonVariants({ variant: "default" })}>Update</Link>
-                <Link href="/#" className={buttonVariants({ variant: "destructive" })}>Delete</Link>
+                <Link href="/dashboard/plates/#" className={buttonVariants({ variant: "default" })}>Order</Link>
                 <DetailsAlert content={<Cont/>}/>
               </TableCell>
             </TableRow>
